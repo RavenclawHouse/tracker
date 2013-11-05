@@ -1,0 +1,35 @@
+<head>
+  <title>tracker</title>
+</head>
+
+<body>
+</body>
+
+<template name="layout">
+  {{> navbar}}
+  <div class="container">
+    {{yield}}
+  </div>
+</template>
+
+<template name="navbar">
+  <div class="navbar">
+    <div class="navbar-inner">
+      <a class="brand" href="#">Tracker</a>
+      <ul class="nav">
+        <li><a href="#">Projects</a></li>
+      </ul>
+      {{accountButtons}}
+    </div>
+  </div>
+</template>
+
+<template name="projectsIndex">
+  <ul>
+    {{#each projects}}
+      <li>
+        {{name}}
+      </li>
+    {{/each}}
+  </ul>
+</template>
